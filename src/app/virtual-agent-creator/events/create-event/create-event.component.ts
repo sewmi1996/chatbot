@@ -13,35 +13,35 @@ export class CreateEventComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.mxgraphInit();
+ //   this.mxgraphInit();
   }
 
-  mxgraphInit = () => {
+//   mxgraphInit = () => {
 
-    editorAppJs.createEditor('src/assets/js/mxgraph/diagrameditor.xml');
+//     editorAppJs.createEditor('src/assets/js/mxgraph/diagrameditor.xml');
 
-    var mxBasePath = 'assets/js/mxgraph';
+//     var mxBasePath = 'assets/js/mxgraph';
 
-    var urlParams = (function (url) {
-      var result = new Object();
-      var params = window.location.search.slice(1).split('&');
-      var idx;
+//     var urlParams = (function (url) {
+//       var result = new Object();
+//       var params = window.location.search.slice(1).split('&');
+//       var idx;
 
-      for (var i = 0; i < params.length; i++) {
-        idx = params[i].indexOf('=');
+//       for (var i = 0; i < params.length; i++) {
+//         idx = params[i].indexOf('=');
 
-        if (idx > 0) {
-          result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
-        }
-      }
+//         if (idx > 0) {
+//           result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+//         }
+//       }
 
-      return result;
-    })(window.location.href);
+//       return result;
+//     })(window.location.href);
 
-    var mxLanguage = urlParams['lang'];
-  }
+//     var mxLanguage = urlParams['lang'];
+//   }
 
-}
+ }
 
 /* export class CreateEventComponent implements AfterViewInit {
 
