@@ -1,0 +1,239 @@
+<div class="left-navbar">
+  <div class="brand">
+    <a href="">
+      <img src="./assets/images/wavenet-logo.svg">
+    </a>
+  </div>
+  <div class="main-navigation">
+    <div class="primary-icons">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <!-- <a matRipple class="nav-link" matTooltip="Virtual Agent Creator" matTooltipPosition="right" (click)="firstLevelClick('virtualAgentCreator')" [ngClass]="{active:firstLevelPage=='virtualAgentCreator'}"> -->
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Virtual Agent Creator" (click)="firstLevelClick('virtualAgentCreator')"
+            [ngClass]="{active:firstLevelPage=='virtualAgentCreator'}">
+            <mat-icon>assignment_ind</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Campaign Services" (click)="firstLevelClick('campaignServices')"
+            [ngClass]="{active:firstLevelPage=='campaignServices'}">
+            <mat-icon>question_answer</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Life Cycle Automation" (click)="firstLevelClick('lifeCycleAutomation')"
+            [ngClass]="{active:firstLevelPage=='lifeCycleAutomation'}">
+            <mat-icon>extension</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Selfcare Orchestrator" (click)="firstLevelClick('selfcareOrchestra')"
+            [ngClass]="{active:firstLevelPage=='selfcareOrchestra'}">
+            <mat-icon>phonelink_setup</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Content Management" (click)="firstLevelClick('contentManagement')"
+            [ngClass]="{active:firstLevelPage=='contentManagement'}">
+            <mat-icon>perm_media</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Integrations" (click)="firstLevelClick('integrations')"
+            [ngClass]="{active:firstLevelPage=='integrations'}">
+            <mat-icon>settings_input_composite</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Analytics" (click)="firstLevelClick('analytics')"
+            [ngClass]="{active:firstLevelPage=='analytics'}">
+            <mat-icon>insert_chart_outlined</mat-icon>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav flex-column" id="bottom-navicons">
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Account">
+            <mat-icon>account_circle</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" placement="right" ngbTooltip="Logout">
+            <mat-icon>power_settings_new</mat-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Home page -->
+    <div class="primary-nav" *ngIf="isHome && firstLevelPage == ''">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('virtualAgentCreator')">
+            Virtual Agent Creator
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('campaignServices')">
+            Campaign Services
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('lifeCycleAutomation')">
+            Life Cycle Automation
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('selfcareOrchestra')">
+            Selfcare Orchestrator
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('contentManagement')">
+            Content Management
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('integrations')">
+            Integrations
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" (click)="firstLevelClick('analytics')">
+            Analytics
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Virtual Agent Creator -->
+    <div class="primary-nav" *ngIf="!isHome && firstLevelPage == 'virtualAgentCreator'">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator/manage-agent']" (click)="secondLevelClick('manageAgent')"
+            [ngClass]="{active:secondLevelPage=='manageAgent'}">
+            Manage Agent
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator/components']" (click)="secondLevelClick('components')"
+            [ngClass]="{active:secondLevelPage=='components'}">
+            Components
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator/events']" (click)="secondLevelClick('events')"
+            [ngClass]="{active:secondLevelPage=='events'}">
+            Events
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator/intents']" (click)="secondLevelClick('intents')"
+            [ngClass]="{active:secondLevelPage=='intents'}">
+            Intents
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator/entities']" (click)="secondLevelClick('entities')"
+            [ngClass]="{active:secondLevelPage=='entities'}">
+            Entities
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator/training']" (click)="secondLevelClick('training')"
+            [ngClass]="{active:secondLevelPage=='training'}">
+            Training
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Settings
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Campaign Services -->
+    <div class="primary-nav" *ngIf="!isHome && firstLevelPage == 'campaignServices'">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 1
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 2
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 3
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 4
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 5
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 6
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Campaign Services 7
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Life cycle automation -->
+    <div class="primary-nav" *ngIf="firstLevelPage == 'lifeCycleAutomation'">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a matRipple class="nav-link" [routerLink]="['/virtual-agent-creator']">
+            Life cycle automation 1
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Life cycle automation 2
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Life cycle automation 3
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Life cycle automation 4
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Life cycle automation 5
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Life cycle automation 6
+          </a>
+        </li>
+        <li class="nav-item">
+          <a matRipple class="nav-link">
+            Life cycle automation 7
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

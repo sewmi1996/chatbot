@@ -1,0 +1,68 @@
+.mat-raised-button {
+  font-family: $font-primary-regular;
+  
+  &.mat-primary {
+    @include themify($themes) {
+      background-color: themed('PrimaryColor');
+    }
+  }
+
+  &.mat-secondry{
+    @include themify($themes) {
+      color: #fff;
+      background-color: themed('SecondryColor');
+    }
+  } 
+}
+
+.mat-form-field{
+  .mat-form-field-wrapper{
+    .mat-form-field-underline{
+      @include themify($themes) {
+        /* background-color: themed('colorBorder'); */
+      }
+    }
+    .mat-icon{
+      @include themify($themes) {
+        color: themed('PrimaryDark');
+      }
+    }
+  }
+
+  &.mat-focused{
+    .mat-form-field-ripple{
+      @include themify($themes) {
+        background-color: themed('PrimaryColor');
+      }
+    }
+
+    .mat-form-field-wrapper{
+      .mat-form-field-label{
+        @include themify($themes) {
+          color: themed('PrimaryColor');
+        }
+      }
+    }
+    
+  }
+}
+
+
+.mat-form-field-appearance-outline{
+  .mat-form-field-outline-start, .mat-form-field-outline-end{
+    border-radius: 0 !important;
+  }
+  .mat-form-field-outline-thick{
+    @include themify($themes) {
+      color: themed('PrimaryColor');
+    }
+  }
+}
+
+.mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label,
+.mat-accent .mat-slider-track-fill{
+  @include themify($themes) {
+    background-color: themed('PrimaryColor');
+  }
+}

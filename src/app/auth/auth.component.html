@@ -1,0 +1,24 @@
+<div class="login">
+  <mat-card>
+    <div class="logo mt-4 mb-4">
+      <img src="./assets/images/wavenet-logo.svg">
+    </div>
+
+    <mat-form-field class="username">
+      <mat-label>User Name</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>account_circle</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="password" class="mb-3">
+      <mat-label>Password</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>lock</mat-icon>
+    </mat-form-field>
+
+    <a id="forgot-pass" href="">Forgot Password</a>
+
+    <button mat-raised-button color="primary" class="float-right" [routerLink]="['/home']">Login</button>
+
+  </mat-card>
+</div>

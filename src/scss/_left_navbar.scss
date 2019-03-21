@@ -1,0 +1,95 @@
+/*----------------- Left Nav bar------------------*/
+.left-navbar {
+  height: 100vh;
+  min-height: $leftbar_min_height;
+
+  @include themify($themes) {
+    background-color: themed('navBGColor');
+  }
+
+  .brand {
+    height: $header_height;
+    padding: 15px;
+    text-align: center;
+
+    @include themify($themes) {
+      border-bottom: solid 1px themed('colorBorder');
+    }
+
+    img {
+      max-height: 30px;
+    }
+  }
+
+  .main-navigation {
+    height: calc(100vh - #{$header_height});
+
+    .primary-icons {
+      float: left;
+      height: 100%;
+      min-height: calc(#{$leftbar_min_height} - #{$header_height});
+
+      @include themify($themes) {
+        color: themed('navIconColor');
+        background-color: themed('navIconBg');
+      }
+
+      a {
+        height: 45px;
+        display: block;
+        width: 50px;
+
+        &.active {
+          @include themify($themes) {
+            background-color: themed('navBGColor');
+            color: themed('PrimaryColor');
+          }
+        }
+
+        &.nav-link {
+          padding: .6rem .75rem;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+
+      #bottom-navicons {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .primary-nav {
+      a {
+        @include themify($themes) {
+          color: themed('navTextColor');
+        }
+
+        line-height: 26px;
+        font-size: 12px;
+        height: 45px;
+
+        &.active {
+          @include themify($themes) {
+            color: #fff;
+            background-color: themed('PrimaryColor');
+          }
+        }
+
+        &.nav-link {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &>ul {
+      dis &>li {
+        &>a {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*----------------- Left Nav bar ends ------------------*/

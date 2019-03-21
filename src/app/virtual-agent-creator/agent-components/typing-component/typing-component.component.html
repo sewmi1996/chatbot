@@ -1,0 +1,41 @@
+<div class="row no-gutters">
+  <div class="main-section col-md-12">
+    <div class="content-page-header">
+      <button mat-icon-button class="back-btn" [routerLink]="['../../']">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      Typing Component
+    </div>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-4">
+
+          <div class="card">
+            <div class="card-header">
+              Set waiting period
+            </div>
+            <div class="card-body">
+              <input type="text" class="form-control mb-4" id="" aria-describedby="" placeholder="Optional pre text">
+              <div class="">
+                Show typing for 5 seconds
+              </div>
+              <mat-slider class="w-100 typing-slider"></mat-slider>
+              <div class="mb-5">
+                <div class="float-left mb-3 t-12">
+                  0s
+                </div>
+                <div class="float-right t-12">
+                  10s
+                </div>
+              </div>
+
+              <hr>
+
+              <button mat-raised-button color="secondry" class="float-right">SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

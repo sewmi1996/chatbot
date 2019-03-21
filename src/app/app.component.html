@@ -1,0 +1,20 @@
+<div class="theme-light">
+  <div class="main-frame">
+    <div class="width-warning-overlay">
+      <div class="text-area">
+        Your browser is too small. Resize your window to expand the working space. Min Resolution 1200px x 675px
+      </div>
+    </div>
+
+    <div class="row flex-xl-nowrap no-gutters">
+      <div class="col-3 col-lg-3 col-xl-2" *ngIf="route.url != '/auth'">
+        <app-left-navbar></app-left-navbar>
+      </div>
+      <main class="content-area col-9 col-lg-9 col-xl-10">
+        <!-- <router-outlet (activate)="onActivate($event)"></router-outlet> -->
+        <router-outlet></router-outlet>
+        <!-- <app-content-area></app-content-area> -->
+      </main>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="row no-gutters">
+  <div class="main-section col-md-8">
+      <div class="content-page-header">
+          <button class="back-btn" mat-button [routerLink]="['../']"><i class="material-icons">keyboard_arrow_left</i></button>
+          Create Component
+      </div>
+      <div class="page-content">
+          <div class="row">
+              <div class="col-md-4">
+                    <mat-card [routerLink]="['./quick-reply']">Quick Reply</mat-card>
+              </div>
+              <div class="col-md-4">
+                    <mat-card [routerLink]="['./image']">Image</mat-card>
+              </div>
+              <div class="col-md-4">
+                    <mat-card [routerLink]="['./text']">Text</mat-card>
+              </div>
+              <div class="col-md-4">
+                    <mat-card [routerLink]="['./typing']">Typing</mat-card>
+              </div>
+              <div class="col-md-4">
+                    <mat-card [routerLink]="['./carousel']">Carousel</mat-card>
+              </div>
+              <div class="col-md-4">
+                    <mat-card >Open Question</mat-card>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="right-section col-md-4">
+      <app-test-agent-console></app-test-agent-console>
+  </div>
+</div>

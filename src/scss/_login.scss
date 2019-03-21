@@ -1,0 +1,34 @@
+.login {
+  @include themify($themes) {
+    background-color: themed('navBGColor');
+  }
+
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+
+  .mat-card {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 5%;
+
+    .logo {
+        text-align: center;
+      img {
+        width: 150px;
+      }
+    }
+
+    .mat-form-field{
+        width: 100%;
+    }
+
+    #forgot-pass{
+        font-size: 14px;
+    }
+
+  }
+}
